@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Favourite Colour</title>
+</head>
+<body>
+
+    <style>
+        .red {background-color: red;}
+        .blue {background-color: blue;}
+        .yellow {background-color: yellow;}
+        .green {background-color: green;}
+        .orange {background-color: orange;}
+    </style>
+
+    <h1>Favourite Colours</h1>
+
+    <form action="/" method="POST">
+        <% for (let colour of colours) { %>
+            <input type="submit" name="fav-colour" value="<%= colour.name %>" class="<%= colour.name %>">
+        <% } %>
+    </form>
+    
+    <h2>Stats</h2>
+    <% for (let colour of colours) { %>
+        <p><%= colour.name %>: <%= colour.count %></p>
+    <% } %>
+</body>
+</html>
