@@ -26,6 +26,8 @@ app.get('/', (req, res) => {
     res.render('index', {title: "Favourite Colour", colours})
 })
 
+// changes
+
 app.post('/', (req, res) => {
     const favouriteColour = req.body['fav-colour']
 
